@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useUserContext } from './context/userContext';
+import { useUserContext } from '../context/userContext'
 
 const SignUp = () => {
 
@@ -24,11 +24,11 @@ const SignUp = () => {
   return (
     <>
       <div
-        className='container-fluid mt-5 d-flex flex-column gap-4 justify-content-center align-items-center text-center'
+        className='container-fluid mt-5 d-flex flex-column gap-3 justify-content-center align-items-center text-center'
         style={{ border: '1px solid black' }}>
         <h3>React Firebase Authentication System</h3>
-
         <div className='p-4' style={{ border: '2px solid blue' }}>
+          <h5 className='text-uppercase mb-4'>signup page</h5>
           <form onSubmit={handleSubmit}>
             {
               error && <div className='alert alert-danger mb-3' role='alert'>{error}</div>

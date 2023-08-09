@@ -24,6 +24,10 @@ const UserProvider = (props) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+    const logOut = () =>{
+        return signOut(auth);
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currUser) => {
             setUser(currUser);
@@ -36,7 +40,8 @@ const UserProvider = (props) => {
         <userContext.Provider value={{
             user,
             signUp,
-            logIn
+            logIn,
+            logOut
         }}>
             {props.children}
         </userContext.Provider>
