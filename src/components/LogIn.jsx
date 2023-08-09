@@ -4,7 +4,7 @@ import GoogleButton from 'react-google-button'
 import { useUserContext } from '../context/userContext'
 const LogIn = () => {
 
-    const { logIn } = useUserContext();
+    const { logIn, googleLogIn } = useUserContext();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
@@ -18,6 +18,16 @@ const LogIn = () => {
             navigate('/home');
         } catch (err) {
             setError(err.message)
+        }
+    }
+
+    const handleGoogleLogIn = async (e) => {
+        e.preventDefault();
+        try {
+            await googleLogIn();
+            navigate('/home')
+        } catch (err) {
+            setError(err.message);
         }
     }
     return (
@@ -54,7 +64,7 @@ const LogIn = () => {
                         </div>
                         <button type="submit" className="btn btn-primary px-5 mt-3">Submit</button>
                     </form>
-                    <GoogleButton className='ms-3 mt-3' />
+                    <GoogleButton className='g-btn ms-3 mt-3' onClick={handleGoogleLogIn} />
                     <div className='mt-3'>Don't have an account?&nbsp;
                         <NavLink to='/signup' ><span>Signup</span></NavLink>
                     </div>
