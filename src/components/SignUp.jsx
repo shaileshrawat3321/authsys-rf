@@ -24,10 +24,10 @@ const SignUp = () => {
   return (
     <>
       <div
-        className='container-fluid mt-5 d-flex flex-column gap-3 justify-content-center align-items-center text-center'
-        style={{ border: '1px solid black' }}>
+        className='container-fluid mt-5 d-flex flex-column gap-2 fw-bold justify-content-center align-items-center text-center'
+      >
         <h3>React Firebase Authentication System</h3>
-        <div className='p-4' style={{ border: '2px solid blue' }}>
+        <div className='p-4' style={{border: '2px solid black'}}>
           <h5 className='text-uppercase mb-4'>signup page</h5>
           <form onSubmit={handleSubmit}>
             {

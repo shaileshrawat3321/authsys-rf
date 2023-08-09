@@ -33,10 +33,10 @@ const LogIn = () => {
     return (
         <>
             <div
-                className='container-fluid mt-5 d-flex flex-column gap-3 justify-content-center align-items-center text-center'
-                style={{ border: '1px solid black' }}>
-                <h3>React Firebase Authentication System</h3>
-                <div className='p-4' style={{ border: '2px solid blue' }}>
+                className='container-fluid mt-5 d-flex flex-column gap-2 fw-bold justify-content-center align-items-center text-center'
+                >
+                <h3 className='underline-primary'>React Firebase Authentication System</h3>
+                <div className='p-4' style={{border: '2px solid black'}}>
                     <h5 className='text-uppercase mb-4'>Login page</h5>
                     {
                         error && <div className='alert alert-danger' role='alert'>{error}</div>

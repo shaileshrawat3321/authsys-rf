@@ -7,7 +7,7 @@ const ErrorPage = () => {
             <h2> &#9888;&#65039; Error 404!!!</h2>
             <p className=''>Go back to the login page</p>
             <NavLink to='/'>
-                <button type='button' className='btn btn-outline-danger'>GO BACK</button>
+                <button type='button' className='btn btn-danger'>GO BACK</button>
             </NavLink>
         </div>
     )
