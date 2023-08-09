@@ -1,11 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const ErrorPage = () => {
-  return (
-    <div>
-      <h1>Jaldi wapis jao tumahri ****</h1>
-    </div>
-  )
+    return (
+        <div className='d-flex flex-column justify-content-center align-items-center gap-3 mt-3'>
+            <h2> &#9888;&#65039; Error 404!!!</h2>
+            <p className=''>Go back to the login page</p>
+            <NavLink to='/'>
+                <button type='button' className='btn btn-outline-danger'>GO BACK</button>
+            </NavLink>
+        </div>
+    )
 }
 
 export default ErrorPage

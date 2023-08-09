@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Home = () => {
+
     return (
         <>
             <div
@@ -11,7 +12,7 @@ const Home = () => {
 
                 <div className='p-4' style={{ border: '2px solid blue' }}>
                     <h4>
-                        Welcome user!!!
+                        Welcome User
                     </h4>
                     <NavLink to='/'>
                         <button type="submit" className="btn btn-primary px-5 mt-3">LOGOUT</button>
